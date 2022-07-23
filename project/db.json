@@ -1,0 +1,14 @@
+{
+  "flights": [
+    {
+      "id": 1,
+      "title": "plane",
+      "airline": "airline",
+      "date&time" : "dd/mm/yy,hh:mm"
+    }
+  ],
+  "profile": {
+    "name": "name",
+    "email": "exemple@gmail.com"
+  }
+}
