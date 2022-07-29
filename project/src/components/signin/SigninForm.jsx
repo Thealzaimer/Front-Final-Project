@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import "./signinformcss.css"
 import { useDispatch } from 'react-redux'
-import { signUp } from '../../JS/Actions/musicAction'
-import { signIn } from '../../JS/Actions/userAction'
+// import { signUp } from '../../JS/Actions/flightsActions'
+import { signIn } from '../../JS/actions/userAction'
 import { Link, useNavigate } from 'react-router-dom'
 
 export default function SigninForm() {

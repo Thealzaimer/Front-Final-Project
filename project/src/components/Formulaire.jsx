@@ -2,14 +2,14 @@ import React from 'react'
 import { useState } from 'react'
 import { Button,Form } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
-import { addFlight } from '../JS/actions/flighsActions'
+import { addFlight } from '../JS/actions/flightsActions'
 import { deleteFlight } from '../JS/actions/flightsActions'
 
 export default function AddFlight() {
     const [flight,setFlight]=useState({
         nom:"",
-        address:"",
-        img:"",
+        airline:"",
+        date:"",
     })
     const handleChange=(e)=>{
         setFlight({...flight,
@@ -21,17 +21,17 @@ export default function AddFlight() {
   return (
     <Form>
     <Form.Group className="mb-3" controlId="formBasicEmail">
-      <Form.Label>Name</Form.Label>
-      <Form.Control type="text" placeholder="Avenue x" name='nom' onChange={handleChange}/>
+      <Form.Label>Flight</Form.Label>
+      <Form.Control type="text" placeholder="" name='nom' onChange={handleChange}/>
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="formBasicPassword"   >
-      <Form.Label>airline</Form.Label>
-      <Form.Control type="text" placeholder="Plan b" name="title" onChange={handleChange} />
+      <Form.Label>Airline</Form.Label>
+      <Form.Control type="text" placeholder="" name="airline" onChange={handleChange} />
     </Form.Group>
     <Form.Group className="mb-3" controlId="formBasicPassword">
       <Form.Label>Date</Form.Label>
-      <Form.Control type="text" placeholder="Plan b" name="date" onChange={handleChange} />
+      <Form.Control type="date" placeholder="" name="date" onChange={handleChange} />
     </Form.Group>
    
     <Button variant="primary" type="submit" onClick={()=>dispatch(addFlight({

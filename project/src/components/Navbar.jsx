@@ -1,12 +1,17 @@
 import {React} from 'react';
 import { NavLink } from 'react-router-dom';
 import  { useSelector } from 'react-redux'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-const Navbar = () => {
-  const state =useSelector((state)=> state.handleCart)
+
+import { Navbar } from 'react-bootstrap';
+
+
+const Navbarr = () => {
+  const list =useSelector((list)=> list.handleCart)
     return(
         <div>
-        <nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm">
+        <Navbar class="navbar navbar-expand-lg bg-white py-3 shadow-sm">
         <div class="container">
           <NavLink class="navbar-brand fw-bold fs-4" to="#">Airlines</NavLink>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,15 +30,15 @@ const Navbar = () => {
               </li>
             </ul>
             <div className="buttons">
-                <NavLink to='/login' className='btn btn-outline-dark'>
+                <NavLink to='/Signin' className='btn btn-outline-dark'>
                    <i className="fa fa-sign-in me-1"></i> Login</NavLink>
-                <NavLink to='/register' className='btn btn-outline-dark ms-2'>
+                <NavLink to='/Signup' className='btn btn-outline-dark ms-2'>
                    <i className="fa fa-user-plus me-1"></i> Register</NavLink>
             </div>
           </div>
         </div>
-      </nav> 
+      </Navbar> 
         </div>
     )
 }
-export default Navbar;
+export default Navbarr;

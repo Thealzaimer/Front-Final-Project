@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import "./signupformcss.css"
 import { useDispatch } from 'react-redux'
-import { signUp } from '../../JS/Actions/userAction'
+import { signUp } from '../../JS/actions/userAction'
 import { Link, useNavigate } from 'react-router-dom'
 
 export default function SignupForm() {
@@ -16,9 +15,7 @@ export default function SignupForm() {
         fullName:fullName,
         password:password,
         email:email,
-        liked:[],
-        playlists:[]
-
+        
     }
     const settingEmail =(e)=>{
         setEmail(e.target.value)
@@ -59,7 +56,7 @@ export default function SignupForm() {
                 
                     <form onSubmit={()=>navigate('/Signin')}>
                         <label className="field field_v2">
-                            <input onChange={(e)=>setFullName(e.target.value)} type="text" className="field__input" placeholder="e.g. Hassen Bouselm" required/>
+                            <input onChange={(e)=>setFullName(e.target.value)} type="text" className="field__input" placeholder="" required/>
                             <span className="field__label-wrap">
                             <span className="field__label">Full name</span>
                             </span>
@@ -67,7 +64,7 @@ export default function SignupForm() {
                         </label>
                         <br/>    
                         <label className="field field_v2">
-                            <input type="email"  onChange={settingEmail} className="field__input" placeholder="e.g. melnik909@ya.ru" required/>
+                            <input type="email"  onChange={settingEmail} className="field__input" placeholder="" required/>
                             <span className="field__label-wrap">
                             <span className="field__label">E-mail</span>
                             </span>
@@ -75,7 +72,7 @@ export default function SignupForm() {
                         </label>
                         <br/>    
                         <label className="field field_v2">
-                            <input onChange={settingpasswords}  type="password" className="field__input" placeholder="egg Dddj3J0F999D" required   />
+                            <input onChange={settingpasswords}  type="password" className="field__input" placeholder="" required   />
                             <span className="field__label-wrap">
                             <span className="field__label">Password</span>
                             </span>
@@ -83,9 +80,9 @@ export default function SignupForm() {
                         </label>
                         <br/>    
                         <label className="field field_v2">
-                            <input  onChange={settingConfirmedPassword} type="password" className="field__input" placeholder="egg Dddj3J0F999D" required   />
+                            <input  onChange={settingConfirmedPassword} type="password" className="field__input" placeholder="" required   />
                             <span className="field__label-wrap">
-                            <span className="field__label">Confirme your password</span>
+                            <span className="field__label">Confirm your password</span>
                             </span>
                             
                         </label>
