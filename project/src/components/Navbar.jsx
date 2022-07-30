@@ -2,6 +2,7 @@ import {React} from 'react';
 import { NavLink } from 'react-router-dom';
 import  { useSelector } from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import "./Navbar.css"
 
 
 import { Navbar } from 'react-bootstrap';
@@ -18,9 +19,9 @@ const Navbarr = () => {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
               <li class="nav-item">
-                <NavLink class="nav-link " aria-current="page" to="/products">Home</NavLink>
+                <NavLink class="nav-link " aria-current="page" to="/home">Home</NavLink>
               </li>
               <li class="nav-item">
                 <NavLink class="nav-link" to="/about">About</NavLink>

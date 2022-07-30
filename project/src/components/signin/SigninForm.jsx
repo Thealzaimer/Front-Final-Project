@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-// import { signUp } from '../../JS/Actions/flightsActions'
+import "./signinformcss.css"
 import { signIn } from '../../JS/actions/userAction'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -25,7 +25,7 @@ export default function SigninForm() {
                 <div >
                     
                     <form  onSubmit={()=>navigate('/')}> <label className="field field_v2">
-                            <input type="email" name='email'   className="field__input" onChange={handleChange} placeholder="e.g. melnik909@ya.ru" required/>
+                            <input type="email" name='email'   className="field__input" onChange={handleChange} placeholder="" required/>
                             <span className="field__label-wrap">
                             <span className="field__label">E-mail</span>
                             </span>
@@ -33,7 +33,7 @@ export default function SigninForm() {
                         </label>
                         <br/>    
                         <label className="field field_v2">
-                            <input  name='password' type="password" className="field__input" onChange={handleChange} placeholder="egg Dddj3J0F999D" required   />
+                            <input  name='password' type="password" className="field__input" onChange={handleChange} placeholder="" required   />
                             <span className="field__label-wrap">
                             <span className="field__label">Password</span>
                             </span>

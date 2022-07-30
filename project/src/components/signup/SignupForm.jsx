@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { signUp } from '../../JS/actions/userAction'
 import { Link, useNavigate } from 'react-router-dom'
+import "./signupformcss.css"
 
 export default function SignupForm() {
     const [fullName,setFullName]=useState("")
@@ -15,7 +16,7 @@ export default function SignupForm() {
         fullName:fullName,
         password:password,
         email:email,
-        
+
     }
     const settingEmail =(e)=>{
         setEmail(e.target.value)
